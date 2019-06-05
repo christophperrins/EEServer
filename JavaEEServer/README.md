@@ -1,17 +1,11 @@
 # 1. Basic Java EE server
 
 **Contents**
+<!-- TOC -->autoauto- [1. Basic Java EE server](#1-basic-java-ee-server)auto- [2. To run this applcation](#2-to-run-this-applcation)auto    - [2.1. Run a local h2 database](#21-run-a-local-h2-database)auto    - [2.2. Create a war file for the project](#22-create-a-war-file-for-the-project)auto    - [2.3. Add a new datasource to your wildfly project](#23-add-a-new-datasource-to-your-wildfly-project)auto    - [2.4. Run the project](#24-run-the-project)autoauto<!-- /TOC -->
 
-[1. Basic Java EE server](#1-basic-java-ee-server)
-- [1.1. To run this applcation](#11-to-run-this-applcation)
-  - [1.1.1. Run a local h2 database](#111-run-a-local-h2-database)
-  - [1.1.2. Create a war file for the project](#112-create-a-war-file-for-the-project)
-  - [1.1.3. Add a new datasource to your wildfly project](#113-add-a-new-datasource-to-your-wildfly-project)
-  - [1.1.4. Run the project](#114-run-the-project)
+# 2. To run this applcation
 
-## 1.1. To run this applcation
-
-### 1.1.1. Run a local h2 database
+## 2.1. Run a local h2 database
 To run a h2 database, download the jar file [here](http://repo2.maven.org/maven2/com/h2database/h2/1.4.199/h2-1.4.199.jar)
 
 Open up a terminal in the same directory as the jar file and run the command
@@ -22,12 +16,12 @@ The server should now be viewable at [localhost:8082](http://localhost:8082)
 
 (the username should be 'sa' and the password will either be empty '' or 'sa')
 
-### 1.1.2. Create a war file for the project
+## 2.2. Create a war file for the project
 Using maven, run `mvn install` on the project and take the created .war file and place it in the deployments of your wildfly server.
 
 **(DONT RUN WILDFLY JUST YET!)**
 
-### 1.1.3. Add a new datasource to your wildfly project
+## 2.3. Add a new datasource to your wildfly project
 In your wildfly folder, go to\
 standalone -> configurations -> standalone.xml
 
@@ -61,7 +55,7 @@ So add the following piece of code underneath
 
 **To this datasource our persistence.xml will now connect!**
 
-### 1.1.4. Run the project
+## 2.4. Run the project
 Make sure the h2database is runnning
 
 Make sure the war file is in the deployments
