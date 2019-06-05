@@ -1,3 +1,5 @@
+Each folder has its own readme!
+
 # Java EE Application
 
 This is a 4 part piece in which I go through:
