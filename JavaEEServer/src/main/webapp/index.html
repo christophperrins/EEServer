@@ -2,5 +2,15 @@
 <html>
     <body>
         <h1><a href="/JavaEEServer-1.0/api/accounts"> Click me </a> to get all accounts</h1>
+        <button onclick="addAccount()">Add Account</button>
+        <script>
+            function addAccount() {
+                let request = new XMLHttpRequest();
+                request.open("POST", "/JavaEEServer-1.0/api/accounts");
+                request.setRequestHeader("Content-Type", "application/json")
+                let body = {name: "Gaza"};
+                request.send(JSON.stringify(body));
+            }
+        </script>
     </body>
 </html>
